@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Project</title>
+    <style>
+        /* Stili generali simili a quelli già definiti */
+        body {
+            background-color: #0a0a0a;
+            font-family: Arial, sans-serif;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #4ecdc4;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #4ecdc4;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            background: #2a2a2a;
+            border: 1px solid #4ecdc4;
+            border-radius: 5px;
+            color: white;
+        }
+        button {
+            padding: 10px 20px;
+            background: #4ecdc4;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.1rem;
+        }
+        button:hover {
+            background: #3ba79d;
+        }
+        .project-type-selector {
+            display: flex;
+            justify-content: space-around;
+        }
+        .project-type-card {
+            background: #333;
+            padding: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .project-type-card:hover {
+            background: #4ecdc4;
+        }
+        .project-type-card h3 {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Create Your Project</h1>
+            <p>Choose a project type and start creating!</p>
+        </div>
+        
+        <div class="project-type-selector">
+            <div class="project-type-card">
+                <h3>Post</h3>
+                <p>Create social media posts.</p>
+            </div>
+            <div class="project-type-card">
+                <h3>Bookmark</h3>
+                <p>Create bookmarks for easy reference.</p>
+            </div>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="project-name">Project Name</label>
+                <input type="text" id="project-name" name="project-name" required>
+            </div>
+            <div class="form-group">
+                <label for="font-style">Choose Font Style</label>
+                <select id="font-style" name="font-style">
+                    <option value="arial">Arial</option>
+                    <option value="times">Times New Roman</option>
+                    <option value="verdana">Verdana</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="text-content">Project Content</label>
+                <textarea id="text-content" name="text-content" rows="4" placeholder="Enter your content here..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="image-upload">Upload Image</label>
+                <input type="file" id="image-upload" name="image-upload">
+            </div>
+            <div class="form-group">
+                <button type="submit">Create Project</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
